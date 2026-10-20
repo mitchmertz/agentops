@@ -60,14 +60,14 @@ skill_summary() {
 
 cat <<'EOF'
 THE LOOP
-  0 Understand  how does this part work?                    /t-research
-  1 Intent      behavior + 1-3 examples (given/when/then)   /t-plan       big outcome: /t-interview
-  2 Build       change + checks (fail before, pass after)   /t-implement
-  3 Check       tests missing, or doubt a green result?     /t-test       CI is the final gate
-  4 Judge       only when a mistake is costly, NEW session  /t-validate   opinion only: /t-review
-  5 Finish      commit, bd close <id>, lesson worth keeping /t-memory
+  1 /t-research      how does this part work?
+  2 /t-plan          behavior + 1-3 examples (given/when/then)   big outcome: /t-interview
+  3 /t-implement     change + checks (fail before, pass after)
+  4 /t-test          tests missing, or doubt a green result?     CI is the final gate
+  5 /t-validate      only when a mistake is costly, NEW session  opinion only: /t-review
+  6 /t-memory        lesson worth keeping; then commit, bd close <id>
 
-  Steps 2-4 in one go, for an accepted change:              /t-rpi <change>
+    /t-rpi <change>  steps 3-5 in one go, for an accepted change
 EOF
 
 print_guided_commands
