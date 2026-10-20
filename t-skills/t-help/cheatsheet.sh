@@ -60,11 +60,14 @@ skill_summary() {
 
 cat <<'EOF'
 THE LOOP
-  1 Intent   behavior + 1-3 examples (given / when / then)   /t-plan if fuzzy
-  2 Build    /t-implement
-  3 Check    the agent runs tests and lint; CI is the gate
-  4 Judge    only when a mistake is costly: NEW session, /t-validate
-  5 Finish   commit, bd close <id>
+  0 Understand  how does this part work?                    /t-research
+  1 Intent      behavior + 1-3 examples (given/when/then)   /t-plan       big outcome: /t-interview
+  2 Build       change + checks (fail before, pass after)   /t-implement
+  3 Check       tests missing, or doubt a green result?     /t-test       CI is the final gate
+  4 Judge       only when a mistake is costly, NEW session  /t-validate   opinion only: /t-review
+  5 Finish      commit, bd close <id>, lesson worth keeping /t-memory
+
+  Steps 2-4 in one go, for an accepted change:              /t-rpi <change>
 EOF
 
 print_guided_commands
